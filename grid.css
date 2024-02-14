@@ -1,0 +1,88 @@
+/* *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.page{
+    height: 100vh;
+    display: grid;
+    background-color: #eee;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+    "logo logo logo nav nav nav nav nav nav nav "
+    "cont cont cont cont cont cont cont . sid sid"
+    "fot fot fot fot fot fot fot fot fot fot";
+}
+h1{
+    grid-area: logo;
+    background-color: red;
+    color: white;
+}
+nav{
+    grid-area: nav;
+    background-color: yellow;
+    color: black;
+}
+section{
+    grid-area: cont;
+    background-color: rgb(0, 30, 255);
+    color: white;
+}
+aside{
+    grid-area: sid;
+    background-color: rgb(0, 255, 242);
+    color: white;
+}
+footer{
+    grid-area: fot;
+    background-color: rgb(0, 0, 0);
+    color: white;
+} */
+
+
+
+
+
+/*
+  Flexible Box
+  For Parent
+  - display: flex => To Start Flexible Box
+  - flex-direction: row => Default Value
+  - flex-wrap: nowrap => Default Value
+  - flex-flow: [Flex-Direction] + [Flex-Wrap]
+  - justify-content: flex-start => Default Value
+  - align-items: stretch => Default Value
+  - align-content: stretch => Default Value
+  For Child
+  - flex-grow: 0 => Default Value
+  - flex-shrink: 1 => Default Value
+  - order: 0 => Default Value
+  - flex-basis: auto => Default Value
+  - flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-flex;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+  }
+  .in {
+    display: inline-block;
+  }
